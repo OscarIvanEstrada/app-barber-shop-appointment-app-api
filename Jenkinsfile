@@ -44,7 +44,7 @@ pipeline {
    stage("docker swarm deploy") {
       steps {
         
-           configFileProvider([configFile(fileId: 'app-barber-shop-appointment-app-api', variable: 'settingsFile')[) {
+           configFileProvider([configFile(fileId: 'app-barber-shop-appointment-app-api', variable: 'settingsFile')]) {
            echo 'deploying the applications...'
             script {
               echo "The file $settingsFile"
