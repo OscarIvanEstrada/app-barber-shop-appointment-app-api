@@ -11,8 +11,7 @@ pipeline {
            
            script {
               def config = readJSON file:"$settingsFile"
-              sh "npm install"
-              sh "npm run build --prod"     
+              sh "mvn clean package"
            }
         }
         
