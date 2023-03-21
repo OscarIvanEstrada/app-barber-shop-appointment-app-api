@@ -11,6 +11,7 @@ pipeline {
            
            script {
               def config = readJSON file:"$settingsFile"
+              sh "npm install -g @angular/cli"
               sh "npm install"
               sh "ng build --prod"     
            }
